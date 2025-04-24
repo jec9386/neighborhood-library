@@ -1,7 +1,7 @@
 package com.pluralsight;
 
 public class Book {
-    private int id ;
+    private int id;
     private String isbn;
     private String title;
     private boolean isCheckedOut;
@@ -43,21 +43,29 @@ public class Book {
         return isCheckedOut;
     }
 
-
     public String getCheckedOutTo() {
         return checkedOutTo;
     }
 
-
-
-    //create methods, how the book should reflect these actions, can change data through one og these 2 methods.
     public void checkOut(String name){
         this.isCheckedOut = true;
         this.checkedOutTo = name;
     }
 
     public void checkIn(){
-        this.checkedOutTo = "";
         this.isCheckedOut = false;
+        this.checkedOutTo = "";
     }
+
+    public String getFormattedBookText(){
+        //return  "ID: " + this.id + ", Title: " +  this.title  + ", IBSN: " + this.isbn ;
+
+        return String.format("%-5d %-51s %21s", this.id, this.title, this.isbn);
+    }
+
+    public static String getFormattedBookTextHeader(){
+        return    "ID     TITLE                                              ISBN\n"
+                + "----- --------------------------------------------------- ---------------------";
+    }
+
 }
