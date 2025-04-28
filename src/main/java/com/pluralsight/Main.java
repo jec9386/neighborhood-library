@@ -5,7 +5,7 @@ import com.sun.tools.jconsole.JConsoleContext;
 import java.util.Scanner;
 
 public class Main {
-
+    //keep main clean and organized by creating methods
     private static Console console = new Console();
     private static Book[] library = getPopulatedBooks();
 
@@ -25,7 +25,7 @@ public class Main {
                 "(1,2,0): ";
 
         int option;
-
+        //we trap them in this loop until they press 0 to exit.
         do {
             option = console.promptForInt(homeScreenPrompt);
             if (option == 1) {
@@ -38,7 +38,7 @@ public class Main {
                 System.out.println("Invalid entry, please try again!");
             }
 
-        } while (option != 0);
+        } while (option != 0);// ends the method
     }
 
     private static void showScreenAvailableBooks() {
@@ -67,9 +67,11 @@ public class Main {
             }
 
         } while (!option.equalsIgnoreCase("N")); // keep asking until a no
-        //on no, exit to main.
+        //on no, exit back into main. it will exit to main on its own if the while condition turns to be false. And the initial do from homescreen will run again until it is exited by 0.
     }
 
+
+    //method for if they said yes to check a book out
     private static void showScreenCheckOutBookYes() {
 
         int bookId = console.promptForInt("Please enter the book Id: ");
@@ -84,7 +86,7 @@ public class Main {
         System.out.printf("%s you have checked book out successfully.\n", name);
     }
 
-    private static void displayAvailableBooks() {
+    private static void displayAvailableBooks() {//This method is the how. How to display available books.
         System.out.println(Book.getFormattedBookTextHeader());
         for (Book book : library) {
             if (!book.isCheckedOut()) {
@@ -93,13 +95,14 @@ public class Main {
         }
     }
 
+    //return a book by the id. given an array of books and the book id, return the book value
     private static Book getBookById(Book[] books, int id) {
         for (Book book : books) {
             if (book.getId() == id) {
                 return book;
             }
         }
-        return null;
+        return null;// if you cant find the book Id
     }
 
     private static void showScreenCheckedOutBooks() {
@@ -107,6 +110,9 @@ public class Main {
     }
 
 
+    //only need to access this method in this class, that's why private.
+    //static because we are not creating an instance of main.
+    //this method is to return a value in the shape of an array book.
     private static Book[] getPopulatedBooks() {
 //
 //        Book b1 = new Book(1, "ISBN 978-1-78862-355-1", "Nginx HTTP Server");
@@ -118,6 +124,8 @@ public class Main {
 //
 //        return allTheBooks;
 
+
+        //create library that holds and array of 20 books. spot in memory for this.
         Book[] library = new Book[20];
 
         library[0] = new Book(1, "ISBN 978-1-78862-355-1", "Nginx HTTP Server");

@@ -2,11 +2,13 @@ package com.pluralsight;
 
 import java.util.Scanner;
 
-public class Console {
+public class Console {//interacting with console class
 
     Scanner scanner = new Scanner(System.in);
 
-    public int promptForInt(String prompt){
+
+    //recieve an int from user
+    public int promptForInt(String prompt/*take in a string called prompt*/){
         boolean hasResult = false;
         int result = -1;
         while(!hasResult) {
@@ -27,7 +29,7 @@ public class Console {
     }
 
 
-
+    // recieve String from user
     public String promptForString(String prompt){
         System.out.print(prompt);
         return scanner.nextLine();
