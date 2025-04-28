@@ -1,0 +1,20 @@
+1|ISBN 978-1-78862-355-1|Nginx Http Server
+2|ISBN 978-1-60309-452-8|Understanding Comics
+3|ISBN 978-0-262-03384-8|Introduction to Algorithms
+4|ISBN 978-1-491-95600-8|Learning Python
+5|ISBN 978-0-134-35805-9|Clean Code
+6|ISBN 978-0-262-03384-8|The Pragmatic Programmer
+7|ISBN 978-1-491-95733-3|Effective Java
+8|ISBN 978-0-596-52068-7|Learning React
+9|ISBN 978-0-134-35805-9|The Clean Coder
+10|ISBN 978-0-262-03384-8|Design Patterns
+11|ISBN 978-0-134-35805-9|Refactoring
+12|ISBN 978-1-68455-408-5|Java: The Complete Reference
+13|ISBN 978-1-491-95715-9|Head First Java
+14|ISBN 978-0-134-35805-9|Java Concurrency in Practice
+15|ISBN 978-1-491-95713-5|Java 8 in Action
+16|ISBN 978-1-491-95719-7|Test-Driven Development
+17|ISBN 978-1-491-95722-7|Spring in Action
+18|ISBN 978-1-491-95721-0|Microservices Architecture
+19|ISBN 978-0-134-35805-9|Building Microservices
+20|ISBN 978-1-491-95730-2|Spring Boot in Action
